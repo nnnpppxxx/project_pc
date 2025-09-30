@@ -1,14 +1,23 @@
 <template>
   <div class="home">
     <section class="hero">
-      <h1>Лучшие ноутбуки 2025 года</h1>
-      <p>Выбери свой идеальный ноутбук для работы, учёбы или игр</p>
-      <router-link class="cta" to="/products">Перейти к товарам</router-link>
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1>Objavte najlepšie notebooky roku 2025</h1>
+        <p>
+          Vybrali sme top modely pre prácu, štúdium a zábavu. Nájdite svoj ideálny notebook!
+        </p>
+        <router-link class="cta-btn" to="/products"
+          >Pozrieť katalóg</router-link
+        >
+      </div>
+      <img
+        class="hero-img"
+        src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+        alt="ноутбук"
+      />
     </section>
 
-    <section class="featured">
-      <h2>Популярные модели</h2>
-      <ProductList />
-    </section>
+
   </div>
 </template>

@@ -1,12 +1,12 @@
 <template>
-  <div class="product-list">
+  <transition-group name="fade" tag="div" class="product-list">
     <ProductCard
       v-for="product in products"
       :key="product.id"
       :product="product"
       @add="addToCart"
     />
-  </div>
+  </transition-group>
 </template>
 
 <script>
@@ -20,8 +20,8 @@ export default {
     const store = useProductsStore();
     return {
       products: store.products,
-      addToCart: (product) => store.addToCart(product)
+      addToCart: (product) => store.addToCart(product),
     };
-  }
+  },
 };
 </script>

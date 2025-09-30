@@ -2,8 +2,8 @@
   <footer class="footer">
     <div class="footer-content container">
       <div class="footer-left">
-        <div class="logo">LaptopShop</div>
-        <p>© 2025 LaptopShop. Все права защищены.</p>
+        <div class="logo">Laptop-Nitra</div>
+        <p>© 2025 Laptop-Nitra. Všetky práva vyhradené.</p>
       </div>
       <div class="footer-right">
         <a href="#" class="footer-link">About</a>
