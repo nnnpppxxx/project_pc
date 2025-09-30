@@ -1,3 +1,26 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* минимум на всю высоту окна */
+}
+
+main.container {
+  flex: 1; /* занимает всё оставшееся место */
+}
+
+
+
+
+
+
+
+
 :root {
   --accent: #1a73e8;
   --accent-dark: #155ab6;
@@ -21,34 +44,6 @@ body {
   padding: 20px;
 }
 
-/* Header */
-.header {
-  background: var(--card-bg);
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 4px 12px var(--shadow);
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.header .logo {
-  font-weight: 700;
-  font-size: 28px;
-  color: var(--accent);
-}
-
-.nav a {
-  margin-left: 16px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-}
-
-.nav a.router-link-exact-active {
-  color: var(--accent);
-}
 
 /* Каталог товаров */
 .product-list {
@@ -115,3 +110,130 @@ button:hover {
   background: var(--accent-dark);
   transform: translateY(-2px);
 }
+/* Header */
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #1a73e8;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Навигационные кнопки "вау" */
+.nav-btn {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1a73e8, #4dabf7);
+  color: white !important; /* добавляем !important */
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover::before {
+  left: 0;
+}
+
+.nav-btn:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.nav-btn.router-link-exact-active {
+  background: linear-gradient(135deg, #155ab6, #1a73e8);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #1a73e8, #155ab6);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px 12px 0 0; /* только верхние углы */
+  width: 100%; /* растягиваем футер на всю ширину */
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; /* центрируем контент */
+}
+
+.footer .logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Кнопки на белом фоне */
+.footer-link {
+  background: white;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
